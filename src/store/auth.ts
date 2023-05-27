@@ -1,20 +1,27 @@
 import { defineStore } from 'pinia'
+import { UserInfo } from '~/utils/type'
 
+interface State {
+  userInfo: Partial<UserInfo>,
+  token: string;
+}
 export const authStore = defineStore({
   id: 'auth',
-  state: () => {
+  state: (): State => {
     return {
-      token: ''
+      token: '',
+      userInfo: {},
     }
   },
   actions: {
     setToken(state: string) {
-      this.token = state
+      this.token = state;
+      sessionStorage.setItem('admin_template', state)
     }
   },
   getters: {
     getToken(state) {
-      return state.token
+      return state.token || sessionStorage.getItem('admin_template')
     }
   }
 })
