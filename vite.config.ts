@@ -3,6 +3,7 @@ import path from 'path'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 function _resolve(dir) {
   return path.resolve(__dirname, dir);
 }
@@ -12,7 +13,6 @@ export default defineConfig({
     vue(),
     AutoImport({
       imports: ["vue", "vue-router", "vue-i18n"],
-      // resolvers: [ElementPlusResolver()],
       dts: "src/auto-imports.d.ts",
       vueTemplate: true,
       eslintrc: { // 生成eslint的配置文件，需要在eslint配置中导入
@@ -20,6 +20,7 @@ export default defineConfig({
       },
     }),
     Components({
+      resolvers: [ElementPlusResolver()],
       dirs: ['src/components'],
       extensions: ['vue'],
       dts: 'src/components.d.ts'
@@ -27,7 +28,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '~': _resolve('src')
+      '~': _resolve('src'),
+      'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js'
     },
   },
 })

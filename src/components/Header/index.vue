@@ -1,12 +1,13 @@
 <template>
-  <el-aside width="200px">
+  <el-header>
     <slot />
-  </el-aside>
+  </el-header>
 </template>
 
 <script setup lang="ts">
+
 </script>
 
-<style scoped lang="less">
+<style scoped>
 
 </style>

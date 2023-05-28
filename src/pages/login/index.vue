@@ -1,16 +1,24 @@
 <template>
   <div class="login">
-    <button @click="jump">{{ t('login.submitText') }}</button>
+    <el-button @click="changeLocale('en')">英文</el-button>
+    <el-button @click="changeLocale('cn')">中文</el-button>
+    <el-button type="primary" @click="jump">{{ t('login.submitText') }}</el-button>
+    <el-button type="primary" @click="jump">{{ t('login.registerText') }}</el-button>
   </div>
 </template>
 
 <script setup lang="ts">
 const router = useRouter();
-const { t } = useI18n();
-console.log(t('login'));
+import { authStore } from '~/store/auth'
+const { locale, t } = useI18n();
 
 const jump = () => {
   router.push({ path: '/home' })
+}
+const store = authStore()
+const changeLocale = (languge: string) => {
+  locale.value = languge
+  store.setLocale(languge)
 }
 </script>
 
@@ -21,15 +29,5 @@ const jump = () => {
     display: flex;
     justify-content: center;
     align-items: center;
-    button {
-      padding: 5px 12px;
-      background: #fff;
-      border: 1px solid #eee;
-      cursor: pointer;
-      &:hover {
-        color: aqua;
-        border-color: aqua;
-      }
-    }
   }
 </style>
