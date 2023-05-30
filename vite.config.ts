@@ -32,4 +32,16 @@ export default defineConfig({
       'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js'
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          // 将 node_modules 中的代码单独打包成一个 JS 文件
+          if (id.includes("node_modules")) {
+            return "vendor";
+          }
+        },
+      },
+    },
+  },
 })

@@ -4,7 +4,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes
 })
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _from, next) => {
   to.meta.title && (window.document.title = <string>to.meta.title)
   next()
 })

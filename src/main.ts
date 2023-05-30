@@ -4,7 +4,6 @@ import router from '~/router'
 import '~/assets/css/base.less'
 import App from './App.vue'
 import i18n from '~/locales'
-import 'element-plus/dist/index.css'
 
 const app = createApp(App)
 app.use(store)

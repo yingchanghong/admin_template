@@ -1,7 +1,8 @@
 import axios, { AxiosInstance, AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios'
+import { authStore } from '~/store/auth';
 interface Result {
   code: number;
-  msg: string
+  msg: string;
 }
 interface ResultData<T = any> extends Result {
   data?: T;
@@ -38,15 +39,18 @@ class RequestHttp {
     )
     this.service.interceptors.response.use(
       (response: AxiosResponse) => {
-        const { data, config } = response; // 解构
+        const store = authStore()
+        const { data, config } = response;
         if (data.code === RequestEnums.OVERDUE) {
-          localStorage.setItem('token', '');
-          return Promise.reject(data);
+          store.clearToken()
+          // 可根据需求是否需重新请求
+          console.log(config)
+          return Promise.reject(data)
         }
         if (data.code && data.code !== RequestEnums.SUCCESS) {
           return Promise.reject(data)
         }
-        return data;
+        return data
       },
       (error: AxiosError) => {
         const { response } = error;
@@ -66,17 +70,17 @@ class RequestHttp {
   }
 
   get<T>(url: string, params?: object): Promise<ResultData<T>> {
-    return this.service.get(url, { params });
+    return this.service.get(url, { params })
   }
   post<T>(url: string, params?: object): Promise<ResultData<T>> {
-    return this.service.post(url, params);
+    return this.service.post(url, params)
   }
   put<T>(url: string, params?: object): Promise<ResultData<T>> {
-    return this.service.put(url, params);
+    return this.service.put(url, params)
   }
   delete<T>(url: string, params?: object): Promise<ResultData<T>> {
-    return this.service.delete(url, { params });
+    return this.service.delete(url, { params })
   }
 }
 
-export default new RequestHttp(config);
+export default new RequestHttp(config)
