@@ -1,6 +1,12 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@element-plus/icons-vue':
+    specifier: ^2.1.0
+    version: 2.1.0(vue@3.3.4)
+  '@vueuse/core':
+    specifier: ^10.1.2
+    version: 10.1.2(vue@3.3.4)
   axios:
     specifier: ^1.4.0
     version: registry.npmmirror.com/axios@1.4.0
@@ -68,7 +74,7 @@ devDependencies:
     version: registry.npmmirror.com/typescript@5.0.4
   unplugin-auto-import:
     specifier: ^0.16.2
-    version: registry.npmmirror.com/unplugin-auto-import@0.16.2
+    version: registry.npmmirror.com/unplugin-auto-import@0.16.2(@vueuse/core@10.1.2)
   unplugin-vue-components:
     specifier: ^0.24.1
     version: registry.npmmirror.com/unplugin-vue-components@0.24.1(vue@3.3.4)
@@ -80,6 +86,14 @@ devDependencies:
     version: registry.npmmirror.com/vue-tsc@1.6.5(typescript@5.0.4)
 
 packages:
+
+  /@element-plus/icons-vue@2.1.0(vue@3.3.4):
+    resolution: {integrity: sha512-PSBn3elNoanENc1vnCfh+3WA9fimRC7n+fWkf3rE5jvv+aBohNHABC/KAR5KWPecxWxDTVT1ERpRbOMRcOV/vA==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      vue: registry.npmmirror.com/vue@3.3.4
+    dev: false
 
   /@esbuild/android-arm64@0.17.19:
     resolution: {integrity: sha512-KBMWvEZooR7+kzY0BtbTQn0OAYY7CsiydT63pVEaPtVYF0hXbUaOyZog37DKxK7NF3XacBJOpYT4adIJh+avxA==}
@@ -349,6 +363,43 @@ packages:
   /@types/node@20.2.5:
     resolution: {integrity: sha512-JJulVEQXmiY9Px5axXHeYGLSjhkZEnD+MDPDGbCbIAbMslkKwmygtZFy1X6s/075Yo94sf8GuSlFfPzysQrWZQ==}
     dev: true
+
+  /@types/web-bluetooth@0.0.17:
+    resolution: {integrity: sha512-4p9vcSmxAayx72yn70joFoL44c9MO/0+iVEBIQXe3v2h2SiAsEIo/G5v6ObFWvNKRFjbrVadNf9LqEEZeQPzdA==}
+
+  /@vueuse/core@10.1.2(vue@3.3.4):
+    resolution: {integrity: sha512-roNn8WuerI56A5uiTyF/TEYX0Y+VKlhZAF94unUfdhbDUI+NfwQMn4FUnUscIRUhv3344qvAghopU4bzLPNFlA==}
+    dependencies:
+      '@types/web-bluetooth': 0.0.17
+      '@vueuse/metadata': 10.1.2
+      '@vueuse/shared': 10.1.2(vue@3.3.4)
+      vue-demi: 0.14.5(vue@3.3.4)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+
+  /@vueuse/core@9.13.0(vue@3.3.4):
+    resolution: {integrity: sha512-pujnclbeHWxxPRqXWmdkKV5OX4Wk4YeK7wusHqRwU0Q7EFusHoqNA/aPhB6KCh9hEqJkLAJo7bb0Lh9b+OIVzw==}
+    dependencies:
+      '@types/web-bluetooth': registry.npmmirror.com/@types/web-bluetooth@0.0.16
+      '@vueuse/metadata': registry.npmmirror.com/@vueuse/metadata@9.13.0
+      '@vueuse/shared': registry.npmmirror.com/@vueuse/shared@9.13.0(vue@3.3.4)
+      vue-demi: registry.npmmirror.com/vue-demi@0.14.5(vue@3.3.4)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
+
+  /@vueuse/metadata@10.1.2:
+    resolution: {integrity: sha512-3mc5BqN9aU2SqBeBuWE7ne4OtXHoHKggNgxZR2K+zIW4YLsy6xoZ4/9vErQs6tvoKDX6QAqm3lvsrv0mczAwIQ==}
+
+  /@vueuse/shared@10.1.2(vue@3.3.4):
+    resolution: {integrity: sha512-1uoUTPBlgyscK9v6ScGeVYDDzlPSFXBlxuK7SfrDGyUTBiznb3mNceqhwvZHjtDRELZEN79V5uWPTF1VDV8svA==}
+    dependencies:
+      vue-demi: 0.14.5(vue@3.3.4)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
 
   /@webassemblyjs/ast@1.11.6:
     resolution: {integrity: sha512-IN1xI7PwOvLPgjcf180gC1bqn3q/QaOCwYUahIOhbYUu8KA/3tw2RT/T0Gidi1l7Hhj5D/INhJxiICObqpMu4Q==}
@@ -809,6 +860,20 @@ packages:
       punycode: 2.3.0
     dev: true
 
+  /vue-demi@0.14.5(vue@3.3.4):
+    resolution: {integrity: sha512-o9NUVpl/YlsGJ7t+xuqJKx8EBGf1quRhCiT6D/J0pfwmk9zUwYkC7yrF4SZCe6fETvSM3UNL2edcbYrSyc4QHA==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: registry.npmmirror.com/vue@3.3.4
+
   /watchpack@2.4.0:
     resolution: {integrity: sha512-Lcvm7MGST/4fup+ifyKi2hjyIAwcdI4HRgtvTpIUxBRhB+RFtUh8XtDOxUfctVCnhVi+QQj49i91OyvzkJl6cg==}
     engines: {node: '>=10.13.0'}
@@ -1135,17 +1200,6 @@ packages:
     name: '@ctrl/tinycolor'
     version: 3.6.0
     engines: {node: '>=10'}
-    dev: false
-
-  registry.npmmirror.com/@element-plus/icons-vue@2.1.0(vue@3.3.4):
-    resolution: {integrity: sha512-PSBn3elNoanENc1vnCfh+3WA9fimRC7n+fWkf3rE5jvv+aBohNHABC/KAR5KWPecxWxDTVT1ERpRbOMRcOV/vA==, registry: http://npm.zhonganinfo.com/, tarball: https://registry.npmmirror.com/@element-plus/icons-vue/-/icons-vue-2.1.0.tgz}
-    id: registry.npmmirror.com/@element-plus/icons-vue/2.1.0
-    name: '@element-plus/icons-vue'
-    version: 2.1.0
-    peerDependencies:
-      vue: ^3.2.0
-    dependencies:
-      vue: registry.npmmirror.com/vue@3.3.4
     dev: false
 
   registry.npmmirror.com/@eslint-community/eslint-utils@4.4.0(eslint@8.41.0):
@@ -1747,21 +1801,6 @@ packages:
     resolution: {integrity: sha512-7OjdcV8vQ74eiz1TZLzZP4JwqM5fA94K6yntPS5Z25r9HDuGNzaGdgvwKYq6S+MxwF0TFRwe50fIR/MYnakdkQ==, registry: http://npm.zhonganinfo.com/, tarball: https://registry.npmmirror.com/@vue/shared/-/shared-3.3.4.tgz}
     name: '@vue/shared'
     version: 3.3.4
-
-  registry.npmmirror.com/@vueuse/core@9.13.0(vue@3.3.4):
-    resolution: {integrity: sha512-pujnclbeHWxxPRqXWmdkKV5OX4Wk4YeK7wusHqRwU0Q7EFusHoqNA/aPhB6KCh9hEqJkLAJo7bb0Lh9b+OIVzw==, registry: http://npm.zhonganinfo.com/, tarball: https://registry.npmmirror.com/@vueuse/core/-/core-9.13.0.tgz}
-    id: registry.npmmirror.com/@vueuse/core/9.13.0
-    name: '@vueuse/core'
-    version: 9.13.0
-    dependencies:
-      '@types/web-bluetooth': registry.npmmirror.com/@types/web-bluetooth@0.0.16
-      '@vueuse/metadata': registry.npmmirror.com/@vueuse/metadata@9.13.0
-      '@vueuse/shared': registry.npmmirror.com/@vueuse/shared@9.13.0(vue@3.3.4)
-      vue-demi: registry.npmmirror.com/vue-demi@0.14.5(vue@3.3.4)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - vue
-    dev: false
 
   registry.npmmirror.com/@vueuse/metadata@9.13.0:
     resolution: {integrity: sha512-gdU7TKNAUVlXXLbaF+ZCfte8BjRJQWPCa2J55+7/h+yDtzw3vOoGQDRXzI6pyKyo6bXFT5/QoPE4hAknExjRLQ==, registry: http://npm.zhonganinfo.com/, tarball: https://registry.npmmirror.com/@vueuse/metadata/-/metadata-9.13.0.tgz}
@@ -2428,12 +2467,12 @@ packages:
       vue: ^3.2.0
     dependencies:
       '@ctrl/tinycolor': registry.npmmirror.com/@ctrl/tinycolor@3.6.0
-      '@element-plus/icons-vue': registry.npmmirror.com/@element-plus/icons-vue@2.1.0(vue@3.3.4)
+      '@element-plus/icons-vue': 2.1.0(vue@3.3.4)
       '@floating-ui/dom': registry.npmmirror.com/@floating-ui/dom@1.2.8
       '@popperjs/core': /@sxzz/popperjs-es@2.11.7
       '@types/lodash': registry.npmmirror.com/@types/lodash@4.14.195
       '@types/lodash-es': registry.npmmirror.com/@types/lodash-es@4.17.7
-      '@vueuse/core': registry.npmmirror.com/@vueuse/core@9.13.0(vue@3.3.4)
+      '@vueuse/core': 9.13.0(vue@3.3.4)
       async-validator: registry.npmmirror.com/async-validator@4.2.5
       dayjs: registry.npmmirror.com/dayjs@1.11.7
       escape-html: registry.npmmirror.com/escape-html@1.0.3
@@ -4741,8 +4780,9 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  registry.npmmirror.com/unplugin-auto-import@0.16.2:
+  registry.npmmirror.com/unplugin-auto-import@0.16.2(@vueuse/core@10.1.2):
     resolution: {integrity: sha512-t5f+xArJZRsfgF8Zftc2JFTJJTo7BPkPSeLQUXt6xxambnwWBer8vpEgwaCYrR50MIm5mjmhjebt33OZXIW0uQ==, registry: http://npm.zhonganinfo.com/, tarball: https://registry.npmmirror.com/unplugin-auto-import/-/unplugin-auto-import-0.16.2.tgz}
+    id: registry.npmmirror.com/unplugin-auto-import/0.16.2
     name: unplugin-auto-import
     version: 0.16.2
     engines: {node: '>=14'}
@@ -4757,6 +4797,7 @@ packages:
     dependencies:
       '@antfu/utils': registry.npmmirror.com/@antfu/utils@0.7.2
       '@rollup/pluginutils': registry.npmmirror.com/@rollup/pluginutils@5.0.2
+      '@vueuse/core': 10.1.2(vue@3.3.4)
       local-pkg: registry.npmmirror.com/local-pkg@0.4.3
       magic-string: registry.npmmirror.com/magic-string@0.30.0
       minimatch: registry.npmmirror.com/minimatch@9.0.1
