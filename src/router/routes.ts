@@ -14,6 +14,7 @@ export const routes = [
   },
   {
     path: '/home',
+    name: 'Home',
     meta: {
       title: '首页',
       keepAlive: false,

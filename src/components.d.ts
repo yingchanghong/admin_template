@@ -20,5 +20,6 @@ declare module '@vue/runtime-core' {
     Locale: typeof import('./components/Locale/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TabBar: typeof import('./components/TabBar/index.vue')['default']
   }
 }
