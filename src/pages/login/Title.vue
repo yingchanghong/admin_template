@@ -1,5 +1,5 @@
 <template>
-  <h2 class="login--title">{{ getFormTitle }}</h2>
+  <h2 class="mb-15px text-center animate-fade-in-right animate-duration-700">{{ getFormTitle }}</h2>
 </template>
 
 <script lang="ts" setup>
@@ -18,8 +18,5 @@
 });
 </script>
 <style lang="less" scoped>
-  .login--title {
-    margin-bottom: 15px;
-    text-align: center;
-  }
+
 </style>

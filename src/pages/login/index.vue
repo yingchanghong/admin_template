@@ -1,7 +1,7 @@
 <template>
   <div class="login">
-    <Locale color="#fff" class="locale"/>
-    <div class="login_form">
+    <Locale color="#fff" class="locale" />
+    <div class="login_form animate-fade-in-right animate-duration-700">
       <LoginForm />
       <RegisterForm />
     </div>

@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import unocss from 'unocss/vite'
 function _resolve(dir) {
   return path.resolve(__dirname, dir);
 }
@@ -24,7 +25,8 @@ export default defineConfig({
       dirs: ['src/components'],
       extensions: ['vue'],
       dts: 'src/components.d.ts'
-    })
+    }),
+    unocss()
   ],
   resolve: {
     alias: {

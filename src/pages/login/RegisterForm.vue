@@ -17,7 +17,7 @@
       <el-button class="btn" type="primary">{{ t('login.registerText') }}</el-button>
     </el-form-item>
     <el-form-item>
-      <el-button class="btn" type="default">{{ t('login.back') }}</el-button>
+      <el-button class="btn" type="default" @click="setLoginState(LoginStateEnum.LOGIN)">{{ t('login.back') }}</el-button>
     </el-form-item>
   </el-form>
 </template>
@@ -25,7 +25,7 @@
 <script lang="ts" setup>
 import Title from './Title.vue'
 import { LoginStateEnum, useLoginState } from './useLogin'
-const { getLoginState } = useLoginState()
+const { getLoginState, setLoginState } = useLoginState()
 const { t } = useI18n()
 const getShow = computed(() => unref(getLoginState) === LoginStateEnum.REGISTER)
 const formData = ref({
