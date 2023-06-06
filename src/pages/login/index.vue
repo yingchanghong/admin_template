@@ -1,33 +1,39 @@
 <template>
   <div class="login">
-    <el-button @click="changeLocale('en')">英文</el-button>
-    <el-button @click="changeLocale('cn')">中文</el-button>
-    <el-button type="primary" @click="jump">{{ t('login.submitText') }}</el-button>
-    <el-button type="primary" @click="jump">{{ t('login.registerText') }}</el-button>
+    <Locale color="#fff" class="locale"/>
+    <div class="login_form">
+      <LoginForm />
+      <RegisterForm />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const router = useRouter();
-import { authStore } from '~/store/auth'
-const { locale, t } = useI18n();
-
-const jump = () => {
-  router.push({ path: '/home' })
-}
-const store = authStore()
-const changeLocale = (languge: string) => {
-  locale.value = languge
-  store.setLocale(languge)
-}
+import LoginForm from './LoginForm.vue'
+import RegisterForm from './RegisterForm.vue'
 </script>
 
 <style scoped lang="less">
   .login {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: #293146;
     display: flex;
     justify-content: center;
     align-items: center;
+    .locale {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      color: #fff;
+    }
+    &_form {
+      width: 50%;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+    }
   }
 </style>

@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { UserInfo } from '~/utils/type'
 
 interface State {
-  userInfo: Partial<UserInfo>,
+  userInfo: Partial<UserInfo> | null,
   token: string;
   locale: string;
 }
@@ -11,7 +11,7 @@ export const authStore = defineStore({
   state: (): State => {
     return {
       token: '',
-      userInfo: {},
+      userInfo: null,
       locale: '',
     }
   },
@@ -27,7 +27,12 @@ export const authStore = defineStore({
     clearToken() {
       this.token = ''
       localStorage.removeItem('admin_template')
-    }
+    },
+    clearAll() {
+      this.token = ''
+      localStorage.removeItem('admin_template')
+      this.userInfo = null
+    },
   },
   getters: {
     getToken(state) {
