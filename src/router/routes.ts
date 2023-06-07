@@ -8,7 +8,8 @@ export const routes = [
     name: "Login",
     meta: {
       title: '登录页',
-      keepAlive: false
+      keepAlive: false,
+      hideNav: true,
     },
     component: () => import("~/pages/login/index.vue")
   },
@@ -18,6 +19,7 @@ export const routes = [
     meta: {
       title: '首页',
       keepAlive: false,
+      hideNav: false,
     },
     component: () => import("~/pages/home/index.vue")
   },
