@@ -19,6 +19,7 @@ export default defineConfig({
     ['lg', { width: '992px' }],
     ['xl', { width: '1200px' }],
     ['2xl', { width: '1600px' }],
+    ['bg-main', { background: '#f0f2f5' }],
     [/^py-(.+)$/, ([, index]) => ({ 'padding': `${index}px 0` })],
     [/^br-(.+)$/, ([, index]) => ({ 'borderRadius: ': `${index}px` })],
   ],

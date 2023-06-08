@@ -2,7 +2,7 @@
 <template>
   <section v-if="!route.meta.hideNav">
     <Aside />
-    <main class="main">
+    <main class="main bg-main">
       <Header/>
       <article>
         <RouterView />
