@@ -1,7 +1,6 @@
 <template>
   <div>
     首页
-    <Locale />
     <CountTo :endVal="endVal" />
   </div>
 </template>

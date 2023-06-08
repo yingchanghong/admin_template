@@ -8,7 +8,7 @@
       <el-input class="animate-delay-200 animate-fade-in-right animate-duration-500" v-model="formData.password" :placeholder="t('login.loginPasswordPlacehodel')" @keypress.enter="handleLogin" clearable animate-delay-200 />
     </el-form-item>
     <el-form-item>
-      <el-button class="btn animate-delay-300 animate-fade-in-right animate-duration-500" type="primary" animate-delay-300>{{ t('login.submitText') }}</el-button>
+      <el-button class="btn animate-delay-300 animate-fade-in-right animate-duration-500" size="large" type="primary" animate-delay-300>{{ t('login.submitText') }}</el-button>
     </el-form-item>
     <el-form-item>
       <el-button class="animate-delay-400 animate-fade-in-right animate-duration-500" type="default" @click="setLoginState(LoginStateEnum.MOBILE)" animate-delay-400>{{ t('login.mobileLogin') }}</el-button>
@@ -35,5 +35,19 @@ const handleLogin = () => {
 <style>
 .btn {
   width: 100%;
+}
+.el-input {
+  width: 100%;
+}
+.el-button {
+  border-radius: 2px;
+}
+@media (max-width: 700px) {
+  .el-button {
+    width: 100%;
+  }
+  .el-button+.el-button {
+    margin: 10px 0 0;
+  }
 }
 </style>

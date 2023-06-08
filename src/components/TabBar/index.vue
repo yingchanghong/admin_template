@@ -26,6 +26,9 @@ watch(() => router.currentRoute.value, (news: any) => {
 <style scoped lang="less">
 .tabs {
   display: flex;
+  padding: 3px 0;
+  background: #fff;
+  border-bottom: 1px solid #d9d9d9;
 
   &_item {
     padding: 3px 10px;
