@@ -10,5 +10,9 @@ export default {
     forgetFormTitle: '忘记密码',
     loginNamePlacehodel: '账号',
     loginPasswordPlacehodel: '密码',
+  },
+  route: {
+    work: '工作台',
+    visu: '看板',
   }
 }

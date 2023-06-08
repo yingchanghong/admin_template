@@ -4,6 +4,10 @@ interface TabsItem {
   fullPath: string;
   name: string;
   query: any;
+  meta: {
+    title: string;
+    [key: string]: any;
+  }
 }
 interface Tabs {
   tabs: TabsItem[];

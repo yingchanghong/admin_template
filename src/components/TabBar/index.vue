@@ -1,24 +1,25 @@
 <template>
   <div class="tabs">
-    <div class="tabs_item" :class="current === item.name && 'tabs--active'" v-for="(item, index) in tabs" :key="index"
-      @click="changeTab(item)">{{ item.name }}</div>
+    <div class="tabs_item" :class="t(current) === t(item.meta.title) && 'tabs--active'" v-for="(item, index) in tabs"
+      :key="index" @click="changeTab(item)">{{ t(item.meta.title) }}</div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { tabStore } from '~/store/tabs'
 import { RouteInfo } from '~/utils/type'
-const router = useRouter();
-const store = tabStore();
-const tabs = ref(store.getTabs);
-const current = ref('');
+const router = useRouter()
+const store = tabStore()
+const tabs = ref(store.getTabs)
+const { t } = useI18n()
+const current = ref('')
 const changeTab = (item: RouteInfo) => {
-  current.value = item.name
+  current.value = item.meta.title
 }
 watch(() => router.currentRoute.value, (news: any) => {
-  const { fullPath, path, name, query } = news;
-  current.value = news.name;
-  store.setTab({ fullPath, path, name, query })
+  const { fullPath, path, name, query, meta } = news
+  current.value = news.meta.title
+  store.setTab({ fullPath, path, name, query, meta })
 },
 )
 </script>

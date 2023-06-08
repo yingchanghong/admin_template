@@ -6,6 +6,6 @@
 .aside {
   width: 200px;
   height: 100%;
-  background: pink;
+  background: #001529;
 }
 </style>

@@ -21,6 +21,28 @@ export const routes = [
       keepAlive: false,
       hideNav: false,
     },
-    component: () => import("~/pages/home/index.vue")
+    redirect: '/home/work',
+    children: [
+      {
+        path: 'work',
+        name: 'Work',
+        meta: {
+          title: 'route.work',
+          keepAlive: false,
+          hideNav: false,
+        },
+        component: () => import("~/pages/home/work/index.vue")
+      },
+      {
+        path: 'visualization',
+        name: 'Visualization',
+        meta: {
+          title: 'route.visu',
+          keepAlive: false,
+          hideNav: false,
+        },
+        component: () => import("~/pages/home/visualization/index.vue")
+      },
+    ],
   },
 ]

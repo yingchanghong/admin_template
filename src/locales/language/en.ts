@@ -10,5 +10,9 @@ export default {
     forgetFormTitle: 'Forget password',
     loginNamePlacehodel: 'Username',
     loginPasswordPlacehodel: 'Password',
+  },
+  route: {
+    work: 'work',
+    visu: 'visual'
   }
 }
