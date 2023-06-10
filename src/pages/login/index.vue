@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div class="login w-full relative flex flex-items-center  flex-justify-center bg-#293146">
     <Locale color="#fff" class="locale" />
     <div class="login_form animate-fade-in-right animate-duration-700">
       <LoginForm />
@@ -15,14 +15,8 @@ import RegisterForm from './RegisterForm.vue'
 
 <style scoped lang="less">
 .login {
-  width: 100%;
   min-height: 100vh;
-  position: relative;
   overflow: hidden;
-  background: #293146;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   .locale {
     position: absolute;
@@ -37,21 +31,25 @@ import RegisterForm from './RegisterForm.vue'
     border-radius: 8px;
   }
 }
+
 @media (min-width: 1600px) {
   .login_form {
     width: 500px;
   }
 }
+
 @media (max-width: 1600px) {
   .login_form {
     width: 500px;
   }
 }
+
 @media (max-width: 992px) {
   .login_form {
     width: 50%;
   }
 }
+
 @media (max-width: 576px) {
   .login_form {
     width: 50%;

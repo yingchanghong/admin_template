@@ -10,8 +10,8 @@
         :placeholder="t('login.loginPasswordPlacehodel')" @keypress.enter="handleLogin" clearable animate-delay-200 />
     </el-form-item>
     <el-form-item>
-      <el-button class="btn animate-delay-300 animate-fade-in-right animate-duration-500" size="large" type="primary"
-        animate-delay-300>{{ t('login.submitText') }}</el-button>
+      <el-button class="btn animate-delay-300 animate-fade-in-right animate-duration-500 w-full" size="large"
+        type="primary" animate-delay-300>{{ t('login.submitText') }}</el-button>
     </el-form-item>
     <el-form-item>
       <el-button class="animate-delay-400 animate-fade-in-right animate-duration-500" type="default"
@@ -39,10 +39,6 @@ const handleLogin = () => {
 }
 </script>
 <style>
-.btn {
-  width: 100%;
-}
-
 .el-input {
   width: 100%;
 }
@@ -59,4 +55,5 @@ const handleLogin = () => {
   .el-button+.el-button {
     margin: 10px 0 0;
   }
-}</style>
+}
+</style>

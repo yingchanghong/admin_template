@@ -22,7 +22,9 @@ export default defineConfig({
     ['2xl', { animation: '1600px', }],
     ['bg-main', { background: '#f0f2f5' }],
     [/^py-(.+)$/, ([, index]) => ({ 'padding': `${index}px 0` })],
-    [/^br-(.+)$/, ([, index]) => ({ 'borderRadius: ': `${index}px` })],
+    [/^br-(.+)$/, ([, index]) => ({ 'borderRadius': `${index}px` })],
+    [/^wp-(.+)$/, ([, index]) => ({ 'width': `${index}px` })],
+    [/^hp-(.+)$/, ([, index]) => ({ 'height': `${index}px` })],
   ],
   theme: {
     colors: {

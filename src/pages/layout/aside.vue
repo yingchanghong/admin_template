@@ -1,5 +1,5 @@
 <template>
-  <div class="aside">
+  <div class="aside wp-200 h-full bg-#001529">
     <el-menu background-color="#545c64" class="el-menu-vertical-demo" :default-active="route.path" text-color="#fff"
       router>
       <menu-item v-for="item in Menu" :key="item.code" :item="item" />
@@ -19,11 +19,3 @@ const Menu = [
   }
 ]
 </script>
-
-<style>
-.aside {
-  width: 200px;
-  height: 100%;
-  background: #001529;
-}
-</style>
