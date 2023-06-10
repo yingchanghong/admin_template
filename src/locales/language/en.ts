@@ -13,6 +13,7 @@ export default {
   },
   route: {
     work: 'work',
-    visu: 'visual'
+    visu: 'visual',
+    sinple: 'sinple'
   }
 }

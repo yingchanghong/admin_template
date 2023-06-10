@@ -11,10 +11,10 @@ const route = useRoute()
 const Menu = [
   {
     code: 'admin_index',
-    meta: { title: '个人中心' },
+    meta: { title: 'route.sinple' },
     children: [
-      { code: 'admin_work', path: '/home/work', meta: { title: '工作台' }, children: null },
-      { code: 'admin_visualization', path: '/home/visualization', meta: { title: '看板' }, children: null },
+      { code: 'admin_work', path: '/home/work', meta: { title: 'route.work' }, children: null },
+      { code: 'admin_visualization', path: '/home/visualization', meta: { title: 'route.visu' }, children: null },
     ]
   }
 ]
