@@ -19,6 +19,7 @@ export default defineConfig({
     ['lg', { width: '992px' }],
     ['xl', { width: '1200px' }],
     ['2xl', { width: '1600px' }],
+    ['2xl', { animation: '1600px', }],
     ['bg-main', { background: '#f0f2f5' }],
     [/^py-(.+)$/, ([, index]) => ({ 'padding': `${index}px 0` })],
     [/^br-(.+)$/, ([, index]) => ({ 'borderRadius: ': `${index}px` })],
@@ -29,4 +30,5 @@ export default defineConfig({
       dark_bg: 'var(--dark-bg)',
     },
   },
+  safelist: [...["search", "edit", "check", "message", "star-off", "delete", "add", "share", "close-small"].map((v) => `ci:${v}`)],
 })
