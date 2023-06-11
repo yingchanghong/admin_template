@@ -5,7 +5,12 @@
     <main class="main bg-main flex-col">
       <Header />
       <article>
-        <RouterView />
+        <router-view v-slot="{ Component }">
+          <transition name="y">
+            <component :is="Component" />
+          </transition>
+        </router-view>
+
       </article>
     </main>
   </section>
@@ -25,5 +30,35 @@ const route = useRoute()
 
 article {
   flex: 1 1 auto;
+}
+
+/* 进入开始 */
+.y-enter-from {
+  opacity: 0;
+}
+
+/* 进入中 */
+.y-enter-active {
+  transition: all 1s linear;
+}
+
+/* 进入完成 */
+.y-enter-to {
+  opacity: 1;
+}
+
+/* 离开开始 */
+.y-leave-from {
+  opacity: 1;
+}
+
+/* 离开中 */
+.y-leave-active {
+  transition: all 0.5s linear;
+}
+
+/* 离开完成 */
+.y-leave-to {
+  opacity: 0;
 }
 </style>

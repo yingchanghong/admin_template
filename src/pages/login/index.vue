@@ -1,7 +1,7 @@
 <template>
   <div class="login w-full relative flex flex-items-center  flex-justify-center bg-#293146">
     <Locale color="#fff" class="locale" />
-    <div class="login_form animate-fade-in-right animate-duration-700">
+    <div class="login_form enter-x-200">
       <LoginForm />
       <RegisterForm />
     </div>

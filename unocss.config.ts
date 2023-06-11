@@ -11,7 +11,8 @@ export default defineConfig({
     ['icon-btn', 'text-16 inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-primary !outline-none']
   ],
   rules: [
-    ['enter-x', { animation: 'names .4s ease-in-out 0.3s', }],
+    // ['enter-x', { animation: 'names .4s ease-in-out 0.3s', }],
+    [/^enter-x-(.+)$/, ([, index]) => ({ 'animation': `names ${index}ms ease-in-out` })],
     [/^bc-(.+)$/, ([, color]) => ({ 'border-color': `#${color}` })],
     ['card-shadow', { 'box-shadow': '0 1px 2px -2px #00000029, 0 3px 6px #0000001f, 0 5px 12px 4px #00000017' }],
     ['sm', { width: '576px' }],

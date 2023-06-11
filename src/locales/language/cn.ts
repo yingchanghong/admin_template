@@ -10,6 +10,8 @@ export default {
     forgetFormTitle: '忘记密码',
     loginNamePlacehodel: '账号',
     loginPasswordPlacehodel: '密码',
+    sms: '获取验证码',
+    smsPlacehodel: '短信验证码'
   },
   route: {
     login: '登录页',

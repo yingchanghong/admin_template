@@ -10,6 +10,8 @@ export default {
     forgetFormTitle: 'Forget password',
     loginNamePlacehodel: 'Username',
     loginPasswordPlacehodel: 'Password',
+    sms: 'Get SMS code',
+    smsPlacehodel: 'SMS code'
   },
   route: {
     login: 'login',
