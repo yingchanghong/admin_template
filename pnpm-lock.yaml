@@ -39,6 +39,9 @@ devDependencies:
   '@commitlint/config-conventional':
     specifier: ^17.6.3
     version: registry.npmmirror.com/@commitlint/config-conventional@17.6.3
+  '@iconify-json/ci':
+    specifier: ^1.1.9
+    version: registry.npmmirror.com/@iconify-json/ci@1.1.9
   '@types/node':
     specifier: ^20.2.5
     version: registry.npmmirror.com/@types/node@20.2.5
@@ -751,11 +754,18 @@ packages:
     version: 1.2.1
     dev: true
 
+  registry.npmmirror.com/@iconify-json/ci@1.1.9:
+    resolution: {integrity: sha512-ZMz5YTH7vz3PEM6j1v2GCxKsfjCtNYenyOS/c4xk2tBHPCUtUuSQvgnqO4INTOMb7dERHV5VLziXFChhcfn02A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@iconify-json/ci/-/ci-1.1.9.tgz}
+    name: '@iconify-json/ci'
+    version: 1.1.9
+    dependencies:
+      '@iconify/types': registry.npmmirror.com/@iconify/types@2.0.0
+    dev: true
+
   registry.npmmirror.com/@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@iconify/types/-/types-2.0.0.tgz}
     name: '@iconify/types'
     version: 2.0.0
-    dev: false
 
   registry.npmmirror.com/@iconify/utils@2.1.5:
     resolution: {integrity: sha512-6MvDI+I6QMvXn5rK9KQGdpEE4mmLTcuQdLZEiX5N+uZB+vc4Yw9K1OtnOgkl8mp4d9X0UrILREyZgF1NUwUt+Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@iconify/utils/-/utils-2.1.5.tgz}

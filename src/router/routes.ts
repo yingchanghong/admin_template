@@ -7,7 +7,7 @@ export const routes = [
     path: '/login',
     name: "Login",
     meta: {
-      title: '登录页',
+      title: 'route.login',
       keepAlive: false,
       hideNav: true,
     },

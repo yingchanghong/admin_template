@@ -12,6 +12,7 @@ export default {
     loginPasswordPlacehodel: 'Password',
   },
   route: {
+    login: 'login',
     work: 'work',
     visu: 'visual',
     sinple: 'sinple'

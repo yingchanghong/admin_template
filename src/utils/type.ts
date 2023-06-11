@@ -14,3 +14,8 @@ export interface RouteInfo {
   meta?: any;
   query: any;
 }
+
+
+export interface Menu extends RouteInfo {
+  children: null | RouteInfo[]
+}

@@ -12,6 +12,7 @@ export default {
     loginPasswordPlacehodel: '密码',
   },
   route: {
+    login: '登录页',
     sinple: '个人中心',
     work: '工作台',
     visu: '看板',

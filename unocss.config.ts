@@ -1,7 +1,7 @@
 import { defineConfig, presetAttributify, presetUno, presetIcons } from 'unocss'
 
 export default defineConfig({
-  presets: [presetUno(), presetAttributify(), presetIcons({ scale: 1.2, warn: true })],
+  presets: [presetUno(), presetAttributify(), presetIcons({ scale: 1.2, warn: true, })],
   shortcuts: [
     ['wh-full', 'w-full h-full'],
     ['f-c-c', 'flex justify-center items-center'],
@@ -32,5 +32,5 @@ export default defineConfig({
       dark_bg: 'var(--dark-bg)',
     },
   },
-  safelist: [...["search", "edit", "check", "message", "star-off", "delete", "add", "share", "close-small"].map((v) => `ci:${v}`)],
+  // safelist: [...["search", "edit", "check", "message", "star-off", "delete", "add", "share", "close-small"].map((v) => `ci:${v}`)],
 })
