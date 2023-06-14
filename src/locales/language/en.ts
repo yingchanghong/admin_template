@@ -18,5 +18,9 @@ export default {
     work: 'work',
     visu: 'visual',
     sinple: 'sinple'
+  },
+  rule: {
+    loginName: 'Please input Activity name',
+    loginPassword: 'Please input Activity password'
   }
 }

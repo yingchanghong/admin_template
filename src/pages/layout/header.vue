@@ -9,7 +9,7 @@
   </header>
 </template>
 <script lang="ts" setup>
-import { menuStore } from '~/store/Menu';
+import { menuStore } from '~/store/Menu'
 const store = menuStore()
 const changeExpand = () => {
   store.setExpand(!store.expand)

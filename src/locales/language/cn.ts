@@ -18,5 +18,9 @@ export default {
     sinple: '个人中心',
     work: '工作台',
     visu: '看板',
+  },
+  rule: {
+    loginName: '请输入用户名',
+    loginPassword: '请输入密码'
   }
 }
