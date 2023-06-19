@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - master
+      - admin_devlop/环境
 
 jobs:
   deploy:
@@ -20,7 +20,8 @@ jobs:
           node-version: 18
           cache: pnpm
       - run: 
-              pnpm install --frozen-lockfile
+              pnpm install --no-frozen-lockfile
+
       - name: Build
         run: pnpm build
 
