@@ -6,6 +6,8 @@ interface Result {
 }
 interface ResultData<T = any> extends Result {
   data?: T;
+  success: boolean;
+  message: string | null;
 }
 const URL: string = ''
 enum RequestEnums {

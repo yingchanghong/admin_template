@@ -34,6 +34,7 @@ watch(() => router.currentRoute.value, (news: any) => {
   store.setTab({ fullPath, path, name, query, meta })
 },
 )
+
 </script>
 
 <style scoped lang="less">

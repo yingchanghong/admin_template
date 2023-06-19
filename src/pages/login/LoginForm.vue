@@ -29,6 +29,7 @@ import Title from './Title.vue'
 import { LoginStateEnum, useLoginState } from './useLogin'
 import { loginRUle } from './rule'
 import router from '~/router';
+import { login } from '~/api'
 const rules = ref(loginRUle)
 const { t } = useI18n()
 const { getLoginState, setLoginState } = useLoginState()
@@ -43,6 +44,9 @@ const handleLogin = async () => {
     return valid
   })
   if (!valid) return
+  const { name, password } = formData.value
+  const { success, message } = await login({ name, password })
+  if (!success) return ElMessage.warning(message || '')
   router.push({ path: '/home/work' })
 }
 </script>
