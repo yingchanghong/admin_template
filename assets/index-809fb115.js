@@ -1,0 +1,1 @@
+import{_ as o}from"./index.vue_vue_type_script_setup_true_lang-d7f6e868.js";import{f as a,r as t,h as s,k as r,y as c,j as _,o as l}from"./vendor-eac2f17d.js";const i=a({__name:"index",setup(m){const e=t(0);return setTimeout(()=>{e.value=5e3},1e3),(u,d)=>{const n=o;return l(),s("div",null,[r(" 首页 "),c(n,{endVal:_(e)},null,8,["endVal"])])}}});export{i as default};
